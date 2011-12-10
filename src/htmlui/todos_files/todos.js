@@ -37,9 +37,11 @@ $(function(){
     // Reference to this collection's model.
     model: Todo,
 
-    // Save all of the todo items under the `"todos"` namespace.
-    localStorage: new Store("todos"),
+//    // Save all of the todo items under the `"todos"` namespace.
+//    localStorage: new Store("todos"),
 
+    url: '/todos',
+    
     // Filter down the list of all todo items that are finished.
     done: function() {
       return this.filter(function(todo){ return todo.get('done'); });
