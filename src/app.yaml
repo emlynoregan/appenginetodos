@@ -1,0 +1,17 @@
+application: emlynhrdtest
+version: backbonetodos
+runtime: python27
+api_version: 1
+threadsafe: true
+
+builtins:
+- deferred: on
+
+handlers:
+- url: /todos_files
+  static_dir: htmlui/todos_files
+
+- url: /.*
+  script: main.app
+
+
