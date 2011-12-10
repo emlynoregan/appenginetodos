@@ -1,8 +1,13 @@
 import webapp2
 
-from htmlui import ToDoHandler
- 
-app = webapp2.WSGIApplication([
-                            ('/', ToDoHandler)
-                            ],
-                            debug=True)
+import htmlui
+import restapi
+
+# basic route for bringing up the app
+lroutes = [ ('/', htmlui.ToDoHandler) ]
+
+# add api routes, see restapi/__init__.py
+lroutes.extend(restapi.restRoutes)
+
+# create the application with these routes
+app = webapp2.WSGIApplication(lroutes, debug=True)
