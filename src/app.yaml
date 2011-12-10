@@ -1,5 +1,5 @@
 application: emlynhrdtest
-version: backbonetodos
+version: todos
 runtime: python27
 api_version: 1
 threadsafe: true
